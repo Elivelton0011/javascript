@@ -1,3 +1,3 @@
-for ( c = 1; c <=3 ; c++ ){
+for ( c = 0; c <=3 ; c++ ){
     console.log(`${c}`)
-}
+} 
