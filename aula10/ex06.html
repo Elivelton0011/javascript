@@ -1,48 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            display: flex;
-            margin: 0%;
-            padding: 0%;
-            height: 100vh;
-            width: 100vw;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #caixa {
-            display: flex;
-            width: 100px;
-            height: 100px;
-            background-color: aqua;
-            align-items: center;
-            justify-content: center;
-            
-        }
-    </style>
+    <title>açoes e funçoes</title>
 </head>
-
+<style>
+    div{
+        background-color: #00829f;
+        width: 200px;
+        height: 200px;
+        color: aliceblue;
+        text-align: center;
+        line-height: 200px;
+    }
+</style>
 <body>
-    <div id="caixa" onclick="clicou()" onmouseout="sair()">CliCk</div>
+    <div id="caixa" onclick="clicou()" onmouseenter="entrou()" onmouseout="saiu()">teste</div>
+
     <script>
-a = window.document.getElementById('caixa')
-        function clicou() {
-            a.innerText = 'Clicou!'
-            a.style.background = 'yellow'
-            a.style.color = 'white'
+         var a = document.getElementById('caixa')
+        function clicou(){
+             a.innerText = "clicou"
+             a.style.background = " #00829f"
         }
-        function sair() {
-            a.innerText = 'CliCk'
-            a.style.background = 'aqua'
-            a.style.color = 'black'
+        function entrou(){
+            a.innerText = "entrou"
+            a.style.background = "red"
+        }
+           function saiu(){
+            a.innerText = "saiu"
+            a.style.background = "yellow"
         }
     </script>
 </body>
-
 </html>
