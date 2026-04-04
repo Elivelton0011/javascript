@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SOMA</title>
 </head>
-
 <body>
-    <input type="number" name="valor1" id="ivalor1">
-    <input type="number" name="valor2" id="ivalor2">
-    <input type="submit" value="somar" onclick="clicou()">
-    <div id="res">o resutando é...</div>
-
-    <script>
-        function clicou() {
-
-            var tn1 = window.document.getElementById('ivalor1')
-            var tn2 = window.document.getElementById('ivalor2')
-            var res = window.document.getElementById('res')
-            var n1 = Number(tn1.value)
-            var n2 = Number(tn2.value)
-            var s = n1 + n2
-
-            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
-
-        }
-
-
-    </script>
+    <input type="number" id="txtn1">
+    <input type="number" id="txtn2">
+    <input type="submit" onclick="soma()">
+    <p  id="res">RESULTADO</p>
 </body>
 
+<script>
+    function soma(){
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.getElementById('txtn2')
+        var res = document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 + n2
+        res.innerText = s
+    }
+</script>
 </html>
