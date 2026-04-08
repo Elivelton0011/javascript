@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ex10</title>
 </head>
 <body>
-    <h1>Nivel de kilometragem</h1>
-    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">
-    <input type="submit" value="Verificar" onclick="calcular()">
+    <h1>sistema de multa</h1>
+    sua quilometram é:
+    <input type="number" name="km" id="km">
+    <input type="button" value="verificar" onclick="clicou()">
+
     <div id="res"></div>
 
     <script>
-        function calcular() {
-        var txtv = window.document.getElementById('txtvel')
-        var res = window.document.getElementById('res')
-        var vel = Number(txtv.value)
 
-        res.innerHTML = `<p>Sua velocida é de <strong>${vel}</strong>Km/H</p>`
-        if (vel > 60){
-            res.innerHTML += 'Você ultrapassou o limite de 60km, MULTADO!'
+        function clicou()
+        {
+            var txtk = document.getElementById('km')
+            var vel = Number(txtk.value)
+            var res = document.getElementById('res')
+
+              res.innerText = `sua velocidade atual é ${vel}km/h\n`
+            if(vel > 60){
+                res.innerText += `Você ultrapasou o limite de velocidade\n`
+            }
+            res.innerText += " dirija com seguraça"
+           
+            
+           
+
+            
         }
-        res.innerHTML += '<p>diriga sempre com cinto de segurança</p>'
-        
-    
-    }
-        
-        
-      
 
     </script>
+    
 </body>
 </html>
