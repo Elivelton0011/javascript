@@ -3,29 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de idade</title>
+    <title>ex13</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header><h1>Verificador de idade</h1></header>
+<body onload="carregar()">
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
     <section>
-        <div>
-            <p><label for="txtano">Ano de nascimento:</label> <input type="number" name="txtano" id="txtano">
-            </p>
-            <p>
-                <input type="radio" name="sexo" id="mas" checked><label for="mas">Masculino</label>
-                <input type="radio" name="sexo" id="fem"><label for="fem">Femenino</label>
-            </p>
-            <p>
-                <input type="submit" value="Verificar" onclick="verificar()">
-            </p>
-        </div>
-        <div id="res">
-            Prencha os dados para ver o resultado!
-        </div>
+        <div id="msg">sua mensagem</div>
+        <div><img src="img/noite.jpg" alt="jpg" id="img"></div>
     </section>
     <footer>
-        <p> &copy; Feito por eli</p>
+        <p>&copy;by Eli chaves</p>
     </footer>
 
     <script src="script.js"></script>
