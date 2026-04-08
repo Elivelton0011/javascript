@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ex11</title>
 </head>
 <body>
-    <h1>Nacionalidade</h1>
-    Seu pais de origem: <input type="text" name="txtpais" id="txtpais">
-    <input type="submit" value="Verificar" onclick="verificar()">
+    Seu pais de nascença: <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="clicou()">
     <div id="res"></div>
 
     <script>
-        function verificar(){
-            var pais = window.document.getElementById('txtpais')
-            var res = window.document.getElementById('res')
+        function clicou(){
 
-            res.innerHTML = `<p>Você nasceu em <strong>${pais.value}</strong></p>`
-            if (pais.value == 'Brasil'){
-                res.innerHTML += `Se vocé nasceu no ${pais.value} você é Brasileiro!`
-            } else {
-                res.innerHTML += `Se vocé nasceu no ${pais.value} você é estrangeiro`
-            }
+        var pais = document.getElementById('pais')
+        var res = document.getElementById('res')
+
+        if(pais.value == "brasil")
+        {
+            res.innerText = "Você é brasileiro"
         }
-
-
+        else
+        {
+            res.innerText = "Você é estrangeiro"
+        }
+    }
+        
     </script>
+    
+
 </body>
 </html>
