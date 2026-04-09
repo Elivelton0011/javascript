@@ -8,11 +8,23 @@
 </head>
 <body>
     <header>
-        <h1>Titulo</h1>
+        <h1>Verificador de idade</h1>
     </header>
     <section>
-        <div>testando</div>
-        <div>olá</div>
+        <div>
+            <p>Ano de nascimento: 
+                <input type="number" name="txtano" id="txtano">
+                 <input type="button" value="verificar" onclick="verificar()">
+            </p>
+            <p>Sexo: 
+                 <input type="radio" name="sex" id="mas">
+                <label for="mas">Masculino</label>
+                <input type="radio" name="sex" id="fem">
+                <label for="fem">Feminino</label>
+               
+            </p>
+        </div>
+        <div id="res"></div>
     </section>
     <footer>
         <p>&copy;by Eli chaves</p>
