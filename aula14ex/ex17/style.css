@@ -14,8 +14,8 @@ section {
  margin: auto;
  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.539);
 }
-div {
-
+div > select {
+width: 300px;
 }
 footer {
     color: white;

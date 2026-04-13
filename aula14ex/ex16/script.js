@@ -1,18 +1,34 @@
-function tabuada(){
-var num = document.getElementById('txtn')
-var tab = document.getElementById('seltab')
+function contar(){
+    var inicio = document.getElementById('txti')
+    var fim = document.getElementById('txtf')
+    var passos = document.getElementById('txtp')
+    var res = document.getElementById('res')
 
-if (num.value.length == 0) {
-    alert('[ERRO] Digite um numero')
-} else {
-    var n = Number(num.value)
-    var c = 1
-    tab.innerHTML = ''
-    while (c <= 10){
-        var item = document.createElement('option')
-        item.text = `${n} X ${c} = ${n*c}`
-        tab.appendChild(item)
-        c++
+    if(inicio.value.length == 0 || fim.value.length == 0 || passos.value.length == 0) {
+        window.alert('[ERRO] faltam dados')
     }
-}
+    else{
+        res.innerHTML = 'Contando: <br>'
+        var i = Number(inicio.value)
+        var f = Number(fim.value)
+        var p = Number(passos.value)
+
+        if(p == 0){
+            window.alert('Valor do passo invalido [considerando passo 1]')
+            p = 1
+        }
+
+        if(i < f ){
+            for(c = i; c <= f ; c += p){
+            res.innerHTML += `${c} `
+          }
+        }  
+        else{
+            for(c = i; c >= f; c -= p)
+                res.innerHTML += `${c} `
+        }
+          
+    }
+
+  
 }
