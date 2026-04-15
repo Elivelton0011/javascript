@@ -22,11 +22,19 @@ else{
         item.text = `Adiconando o valor ${n}`
         tab.appendChild(item)
         vetor.push(n)
+
+        num.value = ''
+        num.focus()
+        res.innerHTML = ''
     }
 }
 }
 
 function finalizar(){
+    if(vetor.length == 0){
+        window.alert('Adicione valores antes de finalizar')
+    }
+    else{
    var tamanho = vetor.length
    var soma = 0
   
@@ -56,7 +64,7 @@ function finalizar(){
 
      res.innerHTML += ` a media dos valores digitados é ${media} <br>`
     
-    
+}
 
 }
 
